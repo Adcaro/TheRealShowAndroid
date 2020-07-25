@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
             mFtpClient.type = FTPClient.TYPE_BINARY
             mFtpClient.changeDirectory("htdocs/trs-db")
             val file = File("therealshow.db")
+
             mFtpClient.upload(file)
             mFtpClient.disconnect(true)
         } catch (e: Exception) {
